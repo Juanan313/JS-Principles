@@ -24,3 +24,9 @@ function test(o) {
 
 o = {};
 test(o);
+
+/*
+    Se puede acceder a todas las variables de esta función por qué han sido declaradas como
+    var lo que permite el acceso a estas desde cualquier punto dentro de la  función en 
+    la que han sido declaradas.
+*/
