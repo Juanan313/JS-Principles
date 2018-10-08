@@ -20,6 +20,11 @@ function varTest() {
     console.log(x);             // 71
 }
 
+/**
+ * Aquí la variable x se sobreescribe por que se vuelve a declarar pero esta vive
+ * en el mismo ambito que la anterior.
+ */
+
 
 function letTest() {
 
@@ -33,6 +38,11 @@ function letTest() {
     console.log(x);             // 31
 }
 
+/**
+ * Igual que el ejercicio anterior pero evitamos que la variable x 'global' a la función
+ * sea modificada cerrando el ambito de la variable let x al bloque donde vive, por haberse
+ * declarado como let.
+ */
 
 function hoistingTest() {
 
@@ -56,6 +66,13 @@ function hoistingTest() {
     console.log(w);               // 1001
   }
 
+  /**
+   *    El primer log devuelve indefinido puesto que aunque lo encuentra dentro de la
+   * función esta no ha sido declarada todavía, el siguiente log (x) recibe el valor declarado en el let
+   * que cómo no afecta a la 'global' de la función esta no es modificada, y el log de y recibe el valor
+   * de la global. luego se asignan los valores a z y w, w se utilizará más adelante en el último log.
+   */
+
 
 varTest();
 
@@ -64,3 +81,8 @@ letTest();
 hoistingTest();
 
 console.log(u);                    
+/**
+ * u ha sido declarada en la función hoistingTest y cómo no  se le ha declarado
+ * un alcance estaa se inicializa como global y al haberse ejecutado anteriormente
+ * dicha función se puede acceder a esta.
+ */

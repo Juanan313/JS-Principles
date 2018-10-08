@@ -24,3 +24,9 @@ function oddsums(n) {
 }
 
 console.log(oddsums(5));            // Returns [1,4,9,16,25]
+
+/**
+ * Los dos primeros logs lanzan un referenceError por que no se puede acceder a ellos
+ * fuera del "bloque" donde se ejecutan.
+ * El último si por que ha sido declarado de forma "global" a toda la función oddsums.
+ */
